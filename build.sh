@@ -96,6 +96,42 @@ START=$(date +%s)
                 fi
                 ;;
 
+        i577-10.1)
+                ./hercskytools/cm-10.1-celox.sh
+                . build/envsetup.sh
+		export CCACHE_BASEDIR="$HOME"
+                ./vendor/cm/get-prebuilts
+		if [ "$ADDITIONAL" = "eng" ]
+                then
+                        brunch cm_i577-eng
+
+                elif [ "$ADDITIONAL" = "userdebug" ]
+		then
+                        brunch cm_i577-userdebug
+
+                else
+                        brunch cm_i577-userdebug
+                fi
+                ;;
+
+        i577-10.2)
+                ./hercskytools/cm-10.2-celox.sh
+                . build/envsetup.sh
+		export CCACHE_BASEDIR="$HOME"
+                ./vendor/cm/get-prebuilts
+		if [ "$ADDITIONAL" = "eng" ]
+                then
+                        brunch cm_i577-eng
+
+                elif [ "$ADDITIONAL" = "userdebug" ]
+		then
+                        brunch cm_i577-userdebug
+
+                else
+                        brunch cm_i577-userdebug
+                fi
+                ;;
+
         quincyatt-10.1)
                 ./hercskytools/cm-10.1-celox.sh
                 . build/envsetup.sh
@@ -135,7 +171,7 @@ START=$(date +%s)
                 echo -e "Usage: $0 DEVICE-BRANCH ADDITIONAL"
 		echo -e "ADDITONAL: eng, userdebug (default)"
                 echo -e "Example: ./build.sh skyrocket-10.1 eng"
-                echo -e "Supported Devices: skyrocket, hercules, quincyatt"
+                echo -e "Supported Devices: skyrocket, hercules, i577, quincyatt"
                 echo -e "Use: ./build.sh clean to make clobber"
                 echo -e "Use: ./build.sh prepare to repo sync"
                 exit 2

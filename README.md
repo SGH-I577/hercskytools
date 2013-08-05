@@ -34,6 +34,7 @@ Build manually:
 make clean                        # remove the curent out directory for a clean build
 breakfast cm_skyrocket-userdebug  # only if building for skyrocket
 breakfast cm_hercules-userdebug   # only if building for hercules
+breakfast cm_i577-userdebug       # only if building for i577
 breakfast cm_quincyatt-userdebug  # only if building for quincy
 ./hercskytools/cm-10.2-celox.sh   # apply our patches (done on topic branch 'auto')
 mka bacon
@@ -50,6 +51,9 @@ build.sh skyrocket-10.2  # runs update script and builds for skyrocket cm-10.2
 
 build.sh hercules-10.1   # runs update script and builds for hercules cm-10.1
 build.sh hercules-10.2   # runs update script and builds for hercules cm-10.2
+
+build.sh i577-10.1  # runs update script and builds for i577 cm-10.1
+build.sh i577-10.2  # runs update script and builds for i577 cm-10.2
 
 build.sh quincyatt-10.1  # runs update script and builds for quincyatt cm-10.1
 build.sh quincyatt-10.2  # runs update script and builds for quincyatt cm-10.2
